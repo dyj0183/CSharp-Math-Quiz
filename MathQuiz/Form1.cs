@@ -32,6 +32,9 @@ namespace MathQuiz
 
         int timeLeft;
 
+        DateTime localDate = DateTime.Now;
+        
+
         public void StartTheQuiz()
         {
             // greater than 1 but less than 51
@@ -75,6 +78,8 @@ namespace MathQuiz
             timeLeft = 30;
             timeLabel.Text = "30 seconds";
             timer1.Start();
+
+            
         }
 
         private bool CheckTheAnswer()
@@ -91,6 +96,7 @@ namespace MathQuiz
         public Form1()
         {
             InitializeComponent();
+            currentDate.Text = localDate.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -160,6 +166,11 @@ namespace MathQuiz
                 int lengthOfAnswer = answerBox.Value.ToString().Length;
                 answerBox.Select(0, lengthOfAnswer);
             }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

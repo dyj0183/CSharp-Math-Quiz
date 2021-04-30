@@ -55,6 +55,7 @@ namespace MathQuiz
             this.dividedLeftLabel = new System.Windows.Forms.Label();
             this.startButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.currentDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -80,6 +81,7 @@ namespace MathQuiz
             this.label1.Size = new System.Drawing.Size(101, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Time Left";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // plusLeftLabel
             // 
@@ -296,12 +298,22 @@ namespace MathQuiz
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // currentDate
+            // 
+            this.currentDate.AutoSize = true;
+            this.currentDate.Location = new System.Drawing.Point(22, 52);
+            this.currentDate.Name = "currentDate";
+            this.currentDate.Size = new System.Drawing.Size(35, 13);
+            this.currentDate.TabIndex = 21;
+            this.currentDate.Text = "label5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.currentDate);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.label12);
@@ -366,6 +378,7 @@ namespace MathQuiz
         private System.Windows.Forms.Label dividedLeftLabel;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label currentDate;
     }
 }
 
